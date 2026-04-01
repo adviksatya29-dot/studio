@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Preview</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="bg">
+
+<div class="card">
+<h2>Preview</h2>
+
+<img src="{{ image_path }}" class="preview">
+
+<form action="/generate" method="POST">
+
+<label>Brightness</label>
+<select name="brightness">
+<option value="low">Low</option>
+<option value="medium" selected>Medium</option>
+<option value="high">High</option>
+</select>
+
+<label>Copies</label>
+<input type="number" name="copies" value="4">
+
+<button>Generate</button>
+
+</form>
+
+</div>
+</body>
+</html>
