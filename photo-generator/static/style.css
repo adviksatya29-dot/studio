@@ -1,0 +1,39 @@
+body.bg {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    font-family: Arial;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    margin: 80px auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    background: #2a5298;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 95%;
+    cursor: pointer;
+}
+
+.preview {
+    width: 200px;
+    border: 3px solid black;
+}
+
+.result {
+    width: 100%;
+    border: 5px solid black;
+}
