@@ -1,7 +1,0 @@
-flask
-gunicorn
-opencv-python-headless
-numpy
-rembg
-Pillow
-onnxruntime
