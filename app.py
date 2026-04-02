@@ -1,13 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import os
-def generate():
-    if "user" not in session:
-        return redirect(url_for("login"))
-
-    try:
-        import cv2
-        import numpy as np
-        from rembg import remove
+from flask import Flask, render_template, request, redirect, url_for, session
+import os
+import json
+import cv2
+import numpy as np
+from rembg import remove
 import json
 
 app = Flask(__name__)
