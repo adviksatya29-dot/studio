@@ -16,27 +16,6 @@ OUTPUT_FOLDER = "static"
 
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
-
-
-# ---------------- LOGIN ----------------
-@app.route("/", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        username = request.form.get("username")
-        password = request.form.get("password")
-
-        with open("users.json", "r") as f:
-            users = json.load(f)
-
-        if username in users and users[username] == password:
-            session["user"] = username
-            return redirect(url_for("dashboard"))
-        else:
-            return render_template("login.html", error="Wrong username or password")
-
-    return render_template("login.html")
-
-
 # ---------------- DASHBOARD ----------------
 @app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
